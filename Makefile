@@ -1,14 +1,10 @@
-CFLAGS := -W -Wall -Wextra -I/usr/include/irssi
+CFLAGS := -W -Wall -Wextra
 LDFLAGS := -ldl
 TARGET := seccomp.so
 
 ifeq ($(ARM),1)
     CC := /usr/bin/arm-linux-gnueabihf-gcc
-    CFLAGS += -I/usr/arm-linux-gnueabihf/include \
-              -I../arm/usr/include/glib-2.0/ \
-              -I../arm/usr/lib/arm-linux-gnueabihf/glib-2.0/include/
-else
-    CFLAGS += $(shell pkg-config glib-2.0 --cflags)
+    CFLAGS += -I/usr/arm-linux-gnueabihf/include
 endif
 
 all: $(TARGET)

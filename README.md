@@ -13,12 +13,6 @@ access to the filesystem. Running Irssi inside a chroot is recommended.
 support to Irssi, but it has never been merged.
 
 
-## Requirements
-
-Header files:
-
-    $ sudo apt install irssi-dev
-
 
 ## Build
 
@@ -28,12 +22,11 @@ A complete build of Irssi isn't required since `module_register()` is resolved
 by `dlsym()`.
 
 
-## Cross compilation (arm)
-
-`glib-2.0` headers must copied in `arm/` folder.
+### Cross compilation (arm)
 
     $ sudo apt install gcc-arm-linux-gnueabihf
     $ ARM=1 make
+
 
 
 ## Irssi configuration
@@ -49,7 +42,7 @@ by `dlsym()`.
 To ensure that the plugin is loaded when Irssi starts, add the following line to
 `~/.irssi/config`:
 
-	/load /home/user/.irssi/modules/seccomp.so
+    /load /home/user/.irssi/modules/seccomp.so
 
 
 
@@ -68,7 +61,8 @@ The `/proc` filesystem gives some
 `SECCOMP_MODE_FILTER`):
 
     $ grep Seccomp /proc/$(pidof irssi)/status
-	Seccomp:	2
+    Seccomp:	2
+
 
 
 ## How to add a new syscall?

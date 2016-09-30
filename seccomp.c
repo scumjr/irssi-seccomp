@@ -4,8 +4,7 @@
 
 #include "seccomp-bpf.h"
 
-#include "irssi-config.h"
-#include "src/common.h"
+#define IRSSI_ABI_VERSION	2
 
 static int load_seccomp(void)
 {
