@@ -22,7 +22,7 @@ Header files:
 
 ## Build
 
-    $ make -C src/
+    $ make
 
 A complete build of Irssi isn't required since `module_register()` is resolved
 by `dlsym()`.
@@ -33,7 +33,7 @@ by `dlsym()`.
 `glib-2.0` headers must copied in `arm/` folder.
 
     $ sudo apt install gcc-arm-linux-gnueabihf
-    $ ARM=1 make -C src/
+    $ ARM=1 make
 
 
 ## Irssi configuration
