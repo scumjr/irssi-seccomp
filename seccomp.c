@@ -33,6 +33,7 @@ static int load_seccomp(void)
 		ALLOW_SYSCALL(geteuid),
 		ALLOW_SYSCALL(getgid),
 		ALLOW_SYSCALL(getsockname),
+		ALLOW_SYSCALL(getsockopt),
 		ALLOW_SYSCALL(getuid),
 		ALLOW_SYSCALL(ioctl),
 		ALLOW_SYSCALL(kill),
