@@ -73,6 +73,7 @@ static int load_seccomp(void)
 		ALLOW_SYSCALL(_llseek),
 		ALLOW_SYSCALL(mmap2),
 		ALLOW_SYSCALL(_newselect),
+		ALLOW_SYSCALL(prlimit64),
 		ALLOW_SYSCALL(send),
 		ALLOW_SYSCALL(sigreturn),
 		ALLOW_SYSCALL(stat64),
